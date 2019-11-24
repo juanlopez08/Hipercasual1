@@ -7,8 +7,22 @@ public class Seguir : MonoBehaviour
 
     public float speed;
     private Transform target;
+    
 
 
+    void OnCollisionEnter(Collision collision)
+    {
+
+        
+        if (collision.gameObject.name.Equals("DestructorEnemigo"))
+        {
+            
+                Destroy(this.gameObject);
+                
+            
+
+        }
+    }
 
 
     // Start is called before the first frame update
